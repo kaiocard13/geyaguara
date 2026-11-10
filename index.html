@@ -86,12 +86,19 @@ h2{margin:0 0 8px;font-size:clamp(26px,4vw,38px);line-height:1.15;font-weight:80
 .btn:hover{background:var(--roxo-escuro)}
 .btn[aria-disabled="true"]{background:#efe8f3;color:var(--texto-suave);pointer-events:none}
 
+.certs{background:var(--creme)}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.cert{display:flex;gap:20px;align-items:center;background:#fff;border-radius:16px;padding:20px}
+.cert img{width:110px;height:auto;flex:none;mix-blend-mode:multiply}
+.cert h3{margin:0 0 6px;font-size:18px;font-weight:800;color:var(--roxo)}
+.cert p{margin:0 0 14px;font-size:15px;color:var(--texto-suave)}
+@media (max-width:480px){.cert{flex-direction:column;align-items:flex-start}}
 .documentos{background:var(--papel)}
 .lista-docs{display:grid;gap:10px;margin:0;padding:0;list-style:none}
 .lista-docs li{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--creme);border-radius:12px;padding:14px 18px}
 .lista-docs strong{font-weight:600}
 
-.sobre-sec{background:var(--creme)}
+.sobre-sec{background:var(--papel)}
 
 .sobre p{margin:0 0 14px;max-width:60ch}
 
@@ -119,6 +126,7 @@ footer strong{color:#fff}
         <ul>
           <li><a href="#como-ler">Como ler</a></li>
           <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#certificacoes">Certificações</a></li>
           <li><a href="#documentos">Documentos</a></li>
           <li><a href="#sobre">Sobre o grupo</a></li>
         </ul>
@@ -178,6 +186,31 @@ footer strong{color:#fff}
           <ul class="docs"><li><a class="btn" href="docs/relatorio-pdc-2025.pdf" target="_blank" rel="noopener">Relatório de atividades (PDF)</a></li><li><a class="btn" href="docs/prestacao-financeira-pdc-2025.pdf" target="_blank" rel="noopener">Prestação financeira (PDF)</a></li></ul>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <section id="certificacoes" class="certs">
+    <div class="wrap">
+      <h2>Certificações</h2>
+      <p class="intro">O grupo é reconhecido por dois ministérios.</p>
+      <div class="cert-grid">
+        <article class="cert">
+          <img src="img/selo-ponto-de-cultura.png" alt="Selo Ponto de Cultura, certificado pelo Ministério da Cultura" width="140" height="140">
+          <div>
+            <h3>Ponto de Cultura</h3>
+            <p>Certificado pelo Ministério da Cultura, Política Nacional Cultura Viva. Certificação em 15/09/2025.</p>
+            <a class="btn" href="docs/certificado-ponto-de-cultura.pdf" target="_blank" rel="noopener">Ver certificado (PDF)</a>
+          </div>
+        </article>
+        <article class="cert">
+          <img src="img/selo-salas-verdes.png" alt="Logo do Projeto Salas Verdes" width="110" height="170">
+          <div>
+            <h3>Sala Verde Casa do Escoteiro</h3>
+            <p>Espaço socioeducativo certificado pelo Ministério do Meio Ambiente no Projeto Salas Verdes, Chamada 2025.</p>
+            <a class="btn" href="docs/certificado-sala-verde.pdf" target="_blank" rel="noopener">Ver certificado (PDF)</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
