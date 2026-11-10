@@ -37,7 +37,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-of
 .rascunho{background:var(--amarelo);color:var(--preto);font-size:14px;font-weight:600}
 .rascunho .wrap{padding-top:10px;padding-bottom:10px}
 
-header.topo{background:var(--roxo);color:#fff}
+header.topo{background:var(--roxo);color:#fff;position:relative;overflow:hidden}
+.lenco{position:absolute;right:-6px;bottom:-6%;height:112%;max-height:700px;width:auto;pointer-events:none}
+.topo .wrap{position:relative;z-index:1}
 .nav{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding:18px 0}
 .marca{display:block;line-height:0;text-decoration:none}
 .marca img{display:block;height:56px;width:auto;max-width:100%}
@@ -46,8 +48,6 @@ header.topo{background:var(--roxo);color:#fff}
 .nav a:hover{border-bottom-color:var(--amarelo)}
 
 .hero{border-top:1px solid rgba(255,255,255,.16)}
-.hero{position:relative}
-.lenco{position:absolute;right:0;top:0;height:min(100%,420px);width:auto;opacity:.95}
 @media (max-width:640px){.lenco{display:none}}
 .hero-texto{padding:48px 0 60px}
 .hero h1{margin:0 0 22px;font-size:clamp(36px,6.4vw,66px);line-height:1.02;font-weight:300;text-transform:lowercase;text-wrap:balance}
@@ -117,6 +117,7 @@ footer strong{color:#fff}
 </div>
 
 <header class="topo">
+  <img class="lenco" src="img/lenco.png" width="152" height="760" alt="" aria-hidden="true">
   <div class="wrap">
     <div class="nav">
       <a class="marca" href="#topo" id="topo">
@@ -133,7 +134,6 @@ footer strong{color:#fff}
       </nav>
     </div>
     <div class="hero">
-      <img class="lenco" src="img/lenco.png" width="93" height="480" alt="" aria-hidden="true">
       <div class="hero-texto">
         <h1>prestação de <strong>contas</strong> dos projetos</h1>
         <p>Aqui o Grupo Escoteiro Ya'Guara mostra de onde vem cada recurso, no que ele foi usado e quais documentos comprovam.</p>
