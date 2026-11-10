@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prestação de contas Ya'Guara</title>
+<meta name="description" content="Prestação de contas dos projetos do Ponto de Cultura Grupo Escoteiro 523/SP Ya'Guara.">
+<meta name="robots" content="noindex"><!-- RASCUNHO: remover antes de publicar no domínio -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2363287f'/%3E%3Ctext x='32' y='45' font-family='Montserrat,Arial,sans-serif' font-size='38' font-weight='800' text-anchor='middle' fill='%23fed643'%3EY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<style>
+/* Direção: roxo chapado com dourado, título em dois pesos (leve e pesado dourado), blocos de projeto sobre creme. */
+:root{
+  --roxo:#63287f;
+  --roxo-escuro:#3f1852;
+  --amarelo:#fed643;
+  --ouro:#e0a93b;
+  --laranja:#d9782d;
+  --creme:#f5efe6;
+  --preto:#141018;
+  --papel:#ffffff;
+  --linha:#e6dccf;
+  --texto-suave:#5a4d63;
+  --corpo:"Montserrat","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--preto);font-family:var(--corpo);font-size:17px;line-height:1.6}
+a{color:var(--roxo)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* aviso de rascunho: apagar o bloco .rascunho antes de publicar */
+.rascunho{background:var(--amarelo);color:var(--preto);font-size:14px;font-weight:600}
+.rascunho .wrap{padding-top:10px;padding-bottom:10px}
+
+header.topo{background:var(--roxo);color:#fff}
+.nav{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding:18px 0}
+.marca{display:block;line-height:0;text-decoration:none}
+.marca img{display:block;height:56px;width:auto;max-width:100%}
+.nav ul{display:flex;flex-wrap:wrap;gap:6px 22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}
+.nav a{color:#fff;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--amarelo)}
+
+.hero{border-top:1px solid rgba(255,255,255,.16)}
+.hero-texto{padding:48px 0 60px}
+.hero h1{margin:0 0 22px;font-size:clamp(36px,6.4vw,66px);line-height:1.02;font-weight:300;text-transform:lowercase;text-wrap:balance}
+.hero h1 strong{display:block;font-weight:800;color:var(--ouro)}
+.hero p{margin:0;max-width:54ch;font-size:18px;color:#efe6f4}
+.hero .dados{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;font-size:14px;font-weight:500;color:#efe6f4}
+.hero .dados b{color:var(--amarelo);font-weight:600}
+
+section{padding:60px 0}
+h2{margin:0 0 8px;font-size:clamp(26px,4vw,38px);line-height:1.15;font-weight:800;text-wrap:balance;color:var(--roxo)}
+.intro{margin:0 0 32px;max-width:62ch;color:var(--texto-suave)}
+.pendente{color:var(--texto-suave);font-weight:500}
+
+.como-ler{background:var(--papel)}
+.como{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.como div{background:var(--creme);border-radius:12px;padding:20px 20px 18px}
+.como h3{margin:0 0 6px;font-size:16px;font-weight:800;color:var(--roxo)}
+.como p{margin:0;font-size:15px;color:var(--texto-suave)}
+
+#projetos{background:var(--creme)}
+#projetos .intro{color:var(--texto-suave)}
+.projetos{display:grid;gap:22px}
+.projeto{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 var(--linha)}
+.projeto header{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:22px 24px 0}
+.ano{background:var(--roxo);color:#fff;font-size:13px;font-weight:800;border-radius:999px;padding:3px 12px}
+.projeto h3{margin:0;font-size:clamp(24px,3.6vw,34px);font-weight:800;line-height:1.1;text-transform:uppercase;color:var(--roxo)}
+.projeto .resumo{margin:12px 24px 0;color:var(--texto-suave);max-width:70ch}
+.apoio{margin:14px 24px 0;padding:0;list-style:none;display:grid;gap:4px;font-size:14px;color:var(--texto-suave)}
+.apoio b{color:var(--preto);font-weight:600}
+.numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;background:#fff;margin:22px 0 0;border-top:1px solid var(--linha)}
+.numeros div{background:#fff;padding:14px 24px;border-bottom:1px solid var(--linha)}
+.numeros dt{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-suave)}
+.numeros dd{margin:2px 0 0;font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.docs{display:flex;flex-wrap:wrap;gap:10px;padding:18px 24px 24px;margin:0;list-style:none}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--corpo);text-decoration:none;color:#fff;background:var(--roxo);border-radius:999px;padding:12px 18px;border:0}
+.btn:hover{background:var(--roxo-escuro)}
+.btn[aria-disabled="true"]{background:#efe8f3;color:var(--texto-suave);pointer-events:none}
+
+.documentos{background:var(--papel)}
+.lista-docs{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.lista-docs li{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--creme);border-radius:12px;padding:14px 18px}
+.lista-docs strong{font-weight:600}
+
+.sobre-sec{background:var(--creme)}
+
+.sobre p{margin:0 0 14px;max-width:60ch}
+
+footer{background:var(--preto);color:#d8cfde;padding:34px 0;font-size:14px}
+footer strong{color:#fff}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="rascunho" role="note">
+  <div class="wrap">Rascunho para aprovação: nomes de projeto, valores e documentos abaixo são exemplos. O conteúdo real entra quando o grupo enviar.</div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="nav">
+      <a class="marca" href="#topo" id="topo">
+        <img src="img/logo-yaguara.png" width="549" height="150" alt="Ya'Guara, Ponto de Cultura Grupo Escoteiro 523/SP">
+      </a>
+      <nav aria-label="Seções da página">
+        <ul>
+          <li><a href="#como-ler">Como ler</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#documentos">Documentos</a></li>
+          <li><a href="#sobre">Sobre o grupo</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero">
+      <div class="hero-texto">
+        <h1>prestação de <strong>contas</strong> dos projetos</h1>
+        <p>Aqui o Grupo Escoteiro Ya'Guara mostra de onde vem cada recurso, no que ele foi usado e quais documentos comprovam.</p>
+        <div class="dados">
+          <span><b>CNPJ</b> 27.458.160/0001-35</span>
+          <span><b>Cidade</b> Itaquaquecetuba, SP</span>
+          <span><b>Atualizado em</b> a informar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="como-ler" class="como-ler">
+    <div class="wrap">
+      <h2>Como ler esta página</h2>
+      <p class="intro">Cada projeto segue a mesma ordem, para você comparar um com o outro sem se perder.</p>
+      <div class="como">
+        <div><h3>1. O que foi feito</h3><p>Um resumo do projeto, com período e público atendido.</p></div>
+        <div><h3>2. Quanto entrou e saiu</h3><p>Valor recebido, valor gasto e saldo, sempre no mesmo quadro.</p></div>
+        <div><h3>3. Onde conferir</h3><p>Relatórios e comprovantes em PDF, prontos para baixar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <div class="wrap">
+      <h2>Projetos</h2>
+      <p class="intro">Do mais recente para o mais antigo.</p>
+      <div class="projetos">
+
+        <article class="projeto">
+          <header>
+            <span class="ano">18 e 19/04</span>
+            <h3>Mesa de Aventura</h3>
+          </header>
+          <p class="resumo">Roda de conversa com gastronomia das cinco regiões do Brasil: diálogo, preparo e degustação. Sábado, das 14h às 17h, no Outlet Premium, em Itaquaquecetuba. <span class="pendente">(ano e resumo a confirmar com o grupo)</span></p>
+          <ul class="apoio">
+            <li><b>Apoio:</b> Política Nacional Aldir Blanc (PNAB), Cultura Itaquaquecetuba e Prefeitura de Itaquaquecetuba</li>
+            <li><b>Realização:</b> Ministério da Cultura e Governo Federal</li>
+          </ul>
+          <dl class="numeros">
+            <div><dt>Recebido</dt><dd>R$ a informar</dd></div>
+            <div><dt>Gasto</dt><dd>R$ a informar</dd></div>
+            <div><dt>Saldo</dt><dd>R$ a informar</dd></div>
+          </dl>
+          <ul class="docs">
+            <li><a class="btn" href="#" aria-disabled="true">Relatório de atividades (PDF)</a></li>
+            <li><a class="btn" href="#" aria-disabled="true">Prestação financeira (PDF)</a></li>
+          </ul>
+        </article>
+
+        <article class="projeto">
+          <header>
+            <span class="ano">Ano</span>
+            <h3>Nome do projeto</h3>
+          </header>
+          <p class="resumo">Cada projeto novo segue este formato e entra no topo da lista. <span class="pendente">(exemplo)</span></p>
+          <dl class="numeros">
+            <div><dt>Período</dt><dd>a informar</dd></div>
+            <div><dt>Recebido</dt><dd>R$ a informar</dd></div>
+            <div><dt>Gasto</dt><dd>R$ a informar</dd></div>
+            <div><dt>Saldo</dt><dd>R$ a informar</dd></div>
+          </dl>
+          <ul class="docs">
+            <li><a class="btn" href="#" aria-disabled="true">Relatório de atividades (PDF)</a></li>
+            <li><a class="btn" href="#" aria-disabled="true">Prestação financeira (PDF)</a></li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="documentos" class="documentos">
+    <div class="wrap">
+      <h2>Documentos do grupo</h2>
+      <p class="intro">Arquivos que valem para todos os projetos.</p>
+      <ul class="lista-docs">
+        <li><strong>Estatuto social</strong><a class="btn" href="#" aria-disabled="true">Baixar PDF</a></li>
+        <li><strong>Ata da diretoria atual</strong><a class="btn" href="#" aria-disabled="true">Baixar PDF</a></li>
+        <li><strong>Comprovante de inscrição no CNPJ</strong><a class="btn" href="#" aria-disabled="true">Baixar PDF</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre-sec">
+    <div class="wrap sobre">
+      <div>
+        <h2>Sobre o grupo</h2>
+        <p>O Grupo Escoteiro Ya'Guara 523/SP é um Ponto de Cultura de Itaquaquecetuba, em São Paulo. <span class="pendente">(texto institucional a revisar com a diretoria)</span></p>
+        <p>Esta página existe para que famílias, parceiros e financiadores acompanhem os projetos do grupo com clareza.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Grupo Escoteiro Ya'Guara 523/SP</strong> · Ponto de Cultura · CNPJ 27.458.160/0001-35</p>
+  </div>
+</footer>
+
+</body>
+</html>
